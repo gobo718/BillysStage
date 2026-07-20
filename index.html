@@ -408,33 +408,8 @@ footer {
   .discovery-tiles span{font-size:.76rem}
 }
 
-.home-curator-button{
-  position:fixed;
-  right:max(14px,env(safe-area-inset-right));
-  bottom:104px;
-  z-index:9998;
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  min-height:48px;
-  padding:0 16px;
-  border:1px solid #c69cff66;
-  border-radius:999px;
-  background:linear-gradient(135deg,#6f43d8,#a744ef);
-  color:#fff;
-  font-weight:900;
-  box-shadow:0 14px 36px #0009,0 0 24px #8b4cff44;
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-}
-.home-curator-button:hover,.home-curator-button:focus-visible{
-  transform:translateY(-2px);
-  outline:2px solid #fff8;
-  outline-offset:2px;
-}
 @media(max-width:420px){
-  .home-curator-button{right:10px;bottom:94px;min-height:44px;padding:0 13px;font-size:.9rem}
-}
+  }
 </style>
 
 
@@ -522,7 +497,6 @@ footer {
   </main>
 
 
-  <a class="home-curator-button" href="curator/" aria-label="Open Curator Control Room"><span aria-hidden="true">🧪</span><span>Curator</span></a>
 
   <div class="home-modal-backdrop" id="homeSubmitModal" hidden>
     <div class="home-modal" role="dialog" aria-modal="true" aria-labelledby="homeSubmitTitle">
@@ -548,7 +522,7 @@ footer {
     </div>
 
     <div class="footer-right">
-      <div>Made by Billy 💜 · v2.6.4 · <a href="diagnostics.html">Diagnostics</a></div>
+      <div>Made by Billy 💜 · v3.0.1 · <a href="diagnostics.html">Diagnostics</a></div>
       <div>Made with 🧪 and 💜</div>
     </div>
   </footer>

@@ -1,10 +1,10 @@
 {
   "project": "Billy Labs",
-  "version": "2.6.4",
-  "baseline": "2.6.2",
-  "build": "BL-263",
-  "channel": "development",
+  "version": "3.0.1",
+  "baseline": "3.0.0",
+  "build": "BL-301",
+  "channel": "staging",
   "verificationPhrase": "Purple Monkeys",
-  "release": "v2.6.4",
-  "name": "Curator Entrance Restoration"
+  "release": "v3.0.1",
+  "name": "Curator Visibility Fix"
 }
