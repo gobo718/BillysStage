@@ -2,7 +2,7 @@
   "$schema": "../../../contracts/module-manifest.schema.json",
   "id": "museum",
   "name": "BillysLab Museum",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "status": "foundation",
   "purpose": "Public player-facing experience for browsing, learning, collecting, and progressing.",
   "owns": [

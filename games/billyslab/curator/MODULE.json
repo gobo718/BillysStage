@@ -2,7 +2,7 @@
   "$schema": "../../../contracts/module-manifest.schema.json",
   "id": "curator",
   "name": "BillysLab Curator",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "status": "foundation",
   "purpose": "Administrative editing, review, diagnostics, metadata management, and controlled publication.",
   "owns": [

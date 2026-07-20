@@ -2,7 +2,7 @@
   "$schema": "../contracts/module-manifest.schema.json",
   "id": "engine",
   "name": "Billy Engine",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "status": "foundation",
   "purpose": "Reusable platform and game-system services used by BillysLab and future games.",
   "owns": [
@@ -17,7 +17,11 @@
     "collection-mechanics",
     "publishing-services",
     "validation-tools",
-    "service-worker"
+    "service-worker",
+    "data-contracts",
+    "item-identity-contract",
+    "collection-projection",
+    "curator-record-contracts"
   ],
   "reservedSystems": [
     "accounts",

@@ -2,7 +2,7 @@
   "$schema": "../../../contracts/module-manifest.schema.json",
   "id": "billyslab-content",
   "name": "BillysLab Game Content",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "status": "foundation",
   "purpose": "Billy-specific data, rules, terminology, lore, presentation assets, and Engine configuration.",
   "owns": [
@@ -16,7 +16,9 @@
     "game-terminology",
     "lore",
     "art-assets",
-    "engine-configuration"
+    "engine-configuration",
+    "collection-storage-adapter",
+    "curator-publication-adapter"
   ],
   "dependsOn": [
     "engine-contracts"
@@ -42,8 +44,5 @@
     "published-curator-data.js",
     "profile-data.js"
   ],
-  "migrationDebt": [
-    "collections-data.js mixes definitions with mechanics",
-    "published-curator-data.js requires versioned public schema"
-  ]
+  "migrationDebt": []
 }

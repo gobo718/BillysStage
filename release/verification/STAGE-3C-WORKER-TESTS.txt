@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: health reports v2.4.0
+ok 1 - health reports v2.4.0
+  ---
+  duration_ms: 40.856926
+  type: 'test'
+  ...
+# Subtest: progress can be read
+ok 2 - progress can be read
+  ---
+  duration_ms: 3.3567
+  type: 'test'
+  ...
+# Subtest: progress can be replaced in one batch
+ok 3 - progress can be replaced in one batch
+  ---
+  duration_ms: 2.375024
+  type: 'test'
+  ...
+# Subtest: favorites compatibility endpoint remains available
+ok 4 - favorites compatibility endpoint remains available
+  ---
+  duration_ms: 1.475459
+  type: 'test'
+  ...
+# Subtest: invalid progress is rejected
+ok 5 - invalid progress is rejected
+  ---
+  duration_ms: 1.155673
+  type: 'test'
+  ...
+# Subtest: migration domains remain defined
+ok 6 - migration domains remain defined
+  ---
+  duration_ms: 0.933856
+  type: 'test'
+  ...
+# Subtest: published blurblet can be read publicly
+ok 7 - published blurblet can be read publicly
+  ---
+  duration_ms: 1.362433
+  type: 'test'
+  ...
+# Subtest: curator blurblet publish requires the configured key
+ok 8 - curator blurblet publish requires the configured key
+  ---
+  duration_ms: 1.992091
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 222.063702

@@ -227,3 +227,11 @@ Added a repeatable integrity gate for the 147,000-row mashup inventory and its 6
 - Established canonical Engine ownership for storage, identity, sync, repositories, cloud API, and Worker services.
 - Preserved historical browser and Worker entry paths with compatibility delegation.
 - Added compatibility tests while retaining current runtime behavior and visible v2.6.4 application label pending a user-verified v3 release.
+
+## v3.0.0 Stage 3C — Data Contracts
+
+- Added canonical typed item identity contracts.
+- Split Engine collection mechanics from BillysLab collection definitions and storage adapters.
+- Split Curator draft records from public published projections.
+- Added versioned JSON schemas and compatibility tests.
+- Preserved existing browser paths, storage keys, and visible behavior.
