@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://billyslab.local/contracts/module-manifest.schema.json",
+  "title": "BillysLab Module Manifest",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "version",
+    "status",
+    "purpose",
+    "owns",
+    "dependsOn",
+    "exports"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string", "minLength": 1 },
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$" },
+    "status": { "enum": ["reserved", "foundation", "active", "mature"] },
+    "purpose": { "type": "string", "minLength": 1 },
+    "owns": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "reservedSystems": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "dependsOn": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "mayImport": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "mustNotImport": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "exports": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "currentEvidence": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "migrationDebt": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+  },
+  "additionalProperties": false
+}
