@@ -1,6 +1,14 @@
-# v3.1.0 — Run Analysis Foundation
+# Changelog
 
-See `V3.1.0_RUN_ANALYSIS_FOUNDATION_CHANGELOG.md`.
+## 3.1.1 — Permanent Analysis Schema
+- Added stable field, option, report, and suggestion IDs.
+- Added Dominant Color Brightness with Light, Medium, Dark, and Mixed options.
+- Rebuilt the review report around Detected Characteristics, Visual Analysis, Additional Observations, and Remaining Categories.
+- Preserved the rule that AI suggestions never overwrite curator data.
+
+# v3.1.1 — Run Analysis Foundation
+
+See `V3.1.1_RUN_ANALYSIS_FOUNDATION_CHANGELOG.md`.
 
 ## v2.6.3 — Curator Control Room Redesign
 - Added a dedicated Control Room landing view with a purple laboratory door and concise substitute-curator orientation.

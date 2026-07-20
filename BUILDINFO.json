@@ -1,10 +1,10 @@
 {
   "project": "Billy Labs",
-  "version": "3.1.0",
-  "baseline": "3.0.1",
-  "build": "BL-310",
+  "version": "3.1.1",
+  "baseline": "3.1.0",
+  "build": "BL-311",
   "channel": "staging",
   "verificationPhrase": "Purple Monkeys",
-  "release": "v3.1.0",
-  "name": "Run Analysis Foundation"
+  "release": "3.1.1",
+  "name": "Permanent Analysis Schema"
 }

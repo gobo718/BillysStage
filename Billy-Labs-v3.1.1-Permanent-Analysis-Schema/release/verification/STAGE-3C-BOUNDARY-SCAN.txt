@@ -1,1 +1,0 @@
-Boundary scan passed. New module scaffolds contain no forbidden references; legacy exceptions are explicitly ledgered.
