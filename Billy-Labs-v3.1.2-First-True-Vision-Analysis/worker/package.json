@@ -1,0 +1,17 @@
+{
+  "name": "billy-labs-worker",
+  "version": "3.1.2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "node --test",
+    "db:create": "wrangler d1 create billy-labs",
+    "db:migrate:local": "wrangler d1 migrations apply billy-labs --local",
+    "db:migrate:remote": "wrangler d1 migrations apply billy-labs --remote"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

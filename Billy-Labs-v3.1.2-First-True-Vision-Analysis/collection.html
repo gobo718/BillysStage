@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080812">
+<meta name="color-scheme" content="dark">
+<title>Unicode Collection · Billy Labs</title>
+<style>
+:root{color-scheme:dark;--bg:#050613;--panel:rgba(20,18,39,.94);--panel2:#17152e;--text:#f8f3ff;--muted:#bdb4c9;--accent:#8b5cff;--accent2:#ff68aa;--accent3:#40b7ff;--border:rgba(223,209,255,.16);--shadow:0 14px 35px rgba(0,0,0,.28)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(circle at 15% 0%,rgba(139,92,255,.22),transparent 32rem),radial-gradient(circle at 90% 12%,rgba(64,183,255,.14),transparent 28rem),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit}.shell{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:24px 0 70px}.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;font-size:1.1rem}.brand-mark{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent2),var(--accent3));box-shadow:var(--shadow)}.back{display:inline-flex;margin:24px 0 14px;color:var(--muted);text-decoration:none;font-weight:800}.hero{padding:clamp(24px,5vw,48px);border:1px solid var(--border);border-radius:30px;background:linear-gradient(145deg,rgba(30,25,65,.98),rgba(12,13,30,.96));box-shadow:var(--shadow)}.eyebrow{color:#c8b7ff;text-transform:uppercase;letter-spacing:.14em;font-weight:900;font-size:.78rem}.hero h1{font-size:clamp(2.5rem,8vw,5.7rem);line-height:.96;margin:10px 0 16px}.summary{font-size:1.08rem;color:var(--muted);line-height:1.65;max-width:70ch}.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:24px}.stat{padding:17px;border-radius:18px;background:rgba(255,255,255,.045);border:1px solid var(--border)}.stat strong{display:block;font-size:1.5rem}.stat span{display:block;color:var(--muted);font-size:.88rem;margin-top:4px}.section{margin-top:34px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:16px}.section h2{font-size:clamp(1.7rem,5vw,2.35rem);margin:0}.section-head p{margin:5px 0 0;color:var(--muted)}.controls{display:flex;gap:10px;flex-wrap:wrap}.controls input,.controls select{min-height:46px;border:1px solid var(--border);border-radius:14px;padding:0 14px;background:var(--panel2);color:var(--text);font:inherit}.controls input{min-width:min(280px,80vw)}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}.card{display:block;text-decoration:none;border-radius:22px;padding:20px 16px;border:1px solid var(--border);background:var(--panel);text-align:center;transition:transform .16s ease,border-color .16s ease}.card:hover,.card:focus-visible{transform:translateY(-3px);border-color:rgba(139,92,255,.8)}.glyph{font-size:4.2rem;line-height:1.1}.name{font-weight:900;margin-top:12px;line-height:1.25}.meta{color:var(--muted);font-size:.84rem;margin-top:7px}.empty{padding:28px;border:1px dashed var(--border);border-radius:20px;color:var(--muted)}footer{margin-top:50px;padding-top:24px;border-top:1px solid var(--border);color:var(--muted);text-align:center}@media(max-width:680px){.shell{width:min(100% - 22px,1180px)}.stats{grid-template-columns:1fr}.section-head{align-items:stretch;flex-direction:column}.controls{display:grid}.controls input{min-width:0;width:100%}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{padding:17px 10px}.glyph{font-size:3.4rem}}
+</style>
+</head>
+<body>
+<div class="shell">
+<a class="brand" href="index.html"><span class="brand-mark">✨</span><span>Billy Labs</span></a>
+<a class="back" href="javascript:history.back()">← Back to the emoji</a>
+<main id="loading" class="empty">Opening that collection…</main>
+<main id="content" hidden>
+<section class="hero"><div class="eyebrow">Official Unicode collection</div><h1 id="title"></h1><p class="summary" id="summary"></p><div class="stats"><div class="stat"><strong id="emojiCount"></strong><span>Kitchen base emoji</span></div><div class="stat"><strong id="mashupCount"></strong><span>Known mashups touching this collection</span></div></div></section>
+<section class="section"><div class="section-head"><div><h2>Explore the collection</h2><p id="resultsCopy"></p></div><div class="controls"><input id="search" type="search" placeholder="Search this collection…" aria-label="Search collection"><select id="sort" aria-label="Sort collection"><option value="name">Name A–Z</option><option value="mashups">Most mashups</option><option value="newest">Newest Unicode first</option></select></div></div><div class="grid" id="grid"></div></section>
+</main>
+<footer>Billy Labs ✨<br>Obsessively solving problems nobody has.</footer>
+</div>
+<script src="emoji-data.js"></script>
+<script src="emoji-metadata.js"></script>
+<script src="mashup-search.js?v=2.5.3"></script>
+<script>
+(()=>{
+ try{
+ const all=window.EMOJI_KITCHEN_DATA||[];
+ const profiles=window.EMOJI_PROFILE_METADATA||{};
+ const $=id=>document.getElementById(id);
+ const params=new URLSearchParams(location.search),type=params.get('type')||'',value=params.get('value')||'';
+ const spokenDate=s=>new Intl.DateTimeFormat('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'}).format(new Date(`${s}T00:00:00Z`));
+ const escapeHtml=s=>String(s).replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+ const present=new Set();all.forEach(r=>{present.add(r[0]);present.add(r[1]);});
+ const fieldMap={'unicode-version':'unicodeVersion','unicode-date':'unicodeRelease','emoji-version':'emojiVersion','category':'category','subgroup':'subgroup'};
+ const field=fieldMap[type];
+ const normalize=(kind,input)=>{
+   let s=String(input??'').trim().replace(/\s+/g,' ');
+   if(kind==='unicode-version')s=s.replace(/^Unicode\s+/i,'');
+   if(kind==='emoji-version')s=s.replace(/^Emoji\s+/i,'');
+   if(kind==='unicode-date'){
+     const match=s.match(/^(\d{4})-?(\d{2})-?(\d{2})$/);
+     if(match)s=`${match[1]}-${match[2]}-${match[3]}`;
+   }
+   return (kind==='category'||kind==='subgroup')?s.toLocaleLowerCase():s;
+ };
+ const normalizedValue=normalize(type,value);
+ let collectionDate='';
+ if(type==='unicode-date'&&normalizedValue){
+   try{collectionDate=spokenDate(normalizedValue);}catch(error){collectionDate=normalizedValue;}
+ }
+ const displayValue=(type==='category'||type==='subgroup')?value.trim():normalizedValue;
+ const labelMap={'unicode-version':`Unicode ${displayValue}`,'unicode-date':collectionDate||'Unicode release','emoji-version':`Emoji ${displayValue}`,'category':displayValue,'subgroup':displayValue};
+ const descriptionMap={'unicode-version':`Every Emoji Kitchen base emoji in Billy Labs that entered Unicode ${displayValue}.`,'unicode-date':`Every Emoji Kitchen base emoji in Billy Labs with an official Unicode release date of ${collectionDate}.`,'emoji-version':`Every Emoji Kitchen base emoji in Billy Labs that joined the emoji set in Emoji ${displayValue}.`,'category':`The ${displayValue} category, gathered into one explorable Billy Labs collection.`,'subgroup':`Every Emoji Kitchen base emoji in the official ${displayValue} subgroup.`};
+ if(!field||!normalizedValue){$('loading').textContent='That collection link is incomplete.';return;}
+ const items=Object.entries(profiles).filter(([e,m])=>present.has(e)&&normalize(type,m[field])===normalizedValue).map(([emoji,meta])=>({emoji,meta,count:all.reduce((n,r)=>n+(r[0]===emoji||r[1]===emoji?1:0),0)}));
+ if(!items.length){$('loading').textContent='Billy Labs could not find any Kitchen emoji in that collection.';return;}
+ const members=new Set(items.map(x=>x.emoji));
+ const mashups=all.filter(r=>members.has(r[0])||members.has(r[1])).length;
+ $('title').textContent=labelMap[type]||value;$('summary').textContent=descriptionMap[type]||'';$('emojiCount').textContent=items.length.toLocaleString();$('mashupCount').textContent=mashups.toLocaleString();document.title=`${labelMap[type]||value} · Billy Labs`;
+ function render(){
+   const q=$('search').value;let shown=BillySearch.searchItems(items,q,x=>`${x.emoji} ${x.meta.name} ${x.meta.category} ${x.meta.subgroup}`);
+   const sort=$('sort').value;shown.sort(sort==='mashups'?(a,b)=>b.count-a.count:sort==='newest'?(a,b)=>(b.meta.unicodeRelease||'').localeCompare(a.meta.unicodeRelease||''):(a,b)=>a.meta.name.localeCompare(b.meta.name));
+   $('resultsCopy').textContent=`Showing ${shown.length.toLocaleString()} of ${items.length.toLocaleString()} emoji.`;
+   $('grid').innerHTML=shown.length?shown.map(x=>`<a class="card" href="emoji.html?emoji=${encodeURIComponent(x.emoji)}"><div class="glyph">${escapeHtml(x.emoji)}</div><div class="name">${escapeHtml(x.meta.name)}</div><div class="meta">${x.count.toLocaleString()} mashup${x.count===1?'':'s'}</div></a>`).join(''):'<div class="empty">Nothing matched that search.</div>';
+ }
+ $('search').addEventListener('input',render);$('sort').addEventListener('change',render);render();$('loading').hidden=true;$('content').hidden=false;
+ }catch(error){
+   console.error('Billy Labs collection error:',error);
+   const loading=document.getElementById('loading');
+   if(loading)loading.textContent='Billy Labs hit a snag opening this collection. Please try refreshing.';
+ }
+})();
+</script>
+<script src="bottom-nav.js?v=2.4.2"></script>
+</body>
+</html>
