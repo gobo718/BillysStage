@@ -1,0 +1,3 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const code=fs.readFileSync('engine/systems/analysis/analysis-jobs.js','utf8');
+const store=new Map();const context={window:{},localStorage:{setItem:(k,v)=>store.set(k,v),getItem:k=>store.get(k)},setTimeout,console};vm.createContext(context);vm.runInContext(code,context);const api=context.window.BillyAnalysisJobs;assert(api,'analysis API should exist');const row=['🐷','🐷','pig_face','20240101','https://example.test/pig.png'];const report=api.reportFor(row);assert(report.observations.some(x=>x.label.includes('Duplicate-ingredient')),'duplicate ingredients must be preserved');const job=api.create([row]);assert.equal(job.total,1);assert.equal(job.state,'queued');console.log('analysis jobs foundation: ok');

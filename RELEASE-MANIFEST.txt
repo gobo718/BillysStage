@@ -84,6 +84,7 @@ V2.6.3_CURATOR_CONTROL_ROOM_REDESIGN_CHANGELOG.md
 V2.6.4_CURATOR_ACCESS_RESTORATION_CHANGELOG.md
 V2.6.4_CURATOR_ENTRANCE_RESTORATION_CHANGELOG.md
 V3.0.1_CURATOR_VISIBILITY_FIX_CHANGELOG.md
+V3.1.0_RUN_ANALYSIS_FOUNDATION_CHANGELOG.md
 achievements.js
 action-ui.js
 billy-cloud-api.js
@@ -154,6 +155,8 @@ engine/service/worker/src/index.js
 engine/service/worker/test/worker.test.js
 engine/service/worker/wrangler.toml
 engine/systems/achievements/README.md
+engine/systems/analysis/README.md
+engine/systems/analysis/analysis-jobs.js
 engine/systems/collections/README.md
 engine/systems/onboarding/README.md
 engine/systems/progression/README.md
@@ -216,6 +219,7 @@ release/verification/STAGE-3C-SHA256SUMS.txt
 release/verification/STAGE-3C-VERIFICATION-REPORT-CARD.md
 release/verification/STAGE-3C-WORKER-TESTS.txt
 studio.html
+tests/analysis-jobs-foundation.test.js
 tests/boundaries/reference-boundaries.test.js
 tests/boundaries/scaffold-preserves-runtime.test.js
 tests/canonical-identity.test.js
