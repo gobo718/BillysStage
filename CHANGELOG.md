@@ -1,3 +1,7 @@
+# v3.1.2
+
+See `V3.1.2_FIRST_TRUE_VISION_ANALYSIS_CHANGELOG.md`.
+
 # Changelog
 
 ## 3.1.1 — Permanent Analysis Schema

@@ -2,7 +2,7 @@
 (() => {
   'use strict';
 
-  const API_VERSION = 6;
+  const API_VERSION = 7;
   const API_BASE_STORAGE_KEY = 'billy-cloud-api-base';
   const JSON_HEADERS = Object.freeze({'content-type': 'application/json'});
 
@@ -95,6 +95,13 @@
 
     getPublishedBlurblet: mashupId =>
       request(`/api/blurblets/${encodeURIComponent(mashupId)}`, {method: 'GET'}),
+
+    analyzeMashup: (specimen, curatorKey) =>
+      request('/api/curator/analyze', {
+        method: 'POST',
+        headers: {'x-curator-key': String(curatorKey || '')},
+        body: JSON.stringify({mashupId: String(specimen?.mashupId || ''), imageUrl: String(specimen?.imageUrl || '')})
+      }),
 
     publishBlurblet: (mashupId, text, publishKey) =>
       request(`/api/curator/blurblets/${encodeURIComponent(mashupId)}`, {

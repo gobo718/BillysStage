@@ -24,3 +24,21 @@ After activation, **Update Blurblet Only** writes directly to D1 and public mash
 - `GET /api/devices/:deviceId`
 - `GET|PUT /api/users/:userId/favorites`
 - `GET|PUT /api/users/:userId/progress`
+
+
+## v3.1.2 vision analysis secrets
+
+Set these Worker secrets before deploying real visual analysis:
+
+```sh
+npx wrangler secret put OPENAI_API_KEY
+npx wrangler secret put CURATOR_PUBLISH_KEY
+```
+
+Optional model override:
+
+```sh
+npx wrangler secret put OPENAI_VISION_MODEL
+```
+
+The default model is `gpt-4.1-mini`. The browser sends only the canonical mashup ID and rendered artwork URL. Ingredient names and canonical labels are deliberately excluded from the vision request.

@@ -34,7 +34,7 @@ const loadClient = ({configuredBase = 'https://api.example.test/', storedBase = 
 (async () => {
   const {api, calls, ctx} = loadClient();
 
-  if (api.version !== 6) throw Error('Unexpected API client version');
+  if (api.version !== 7) throw Error('Unexpected API client version');
   if (api.storageKey !== 'billy-cloud-api-base') throw Error('Storage key was not exposed');
   if (!api.isConfigured()) throw Error('API should be configured');
   if (api.getBaseUrl() !== 'https://api.example.test') throw Error('Base URL was not normalized');
@@ -49,8 +49,12 @@ const loadClient = ({configuredBase = 'https://api.example.test/', storedBase = 
     throw Error('JSON content type was not applied');
   }
 
+  await api.analyzeMashup({mashupId:'😀|🥳', imageUrl:'https://example.test/mashup.png'}, 'secret');
+  if (calls[1].url !== 'https://api.example.test/api/curator/analyze') throw Error('Wrong analysis endpoint');
+  if (calls[1].init.headers['x-curator-key'] !== 'secret') throw Error('Analysis curator header was not preserved');
+
   await api.publishBlurblet('😀|🥳', 'Live!', 'secret');
-  if (calls[1].init.headers['x-curator-key'] !== 'secret') {
+  if (calls[2].init.headers['x-curator-key'] !== 'secret') {
     throw Error('Curator header was not preserved');
   }
 

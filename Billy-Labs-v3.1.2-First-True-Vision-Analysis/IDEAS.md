@@ -1,6 +1,0 @@
-"Pack opening mode"
-"Neglected emoji leaderboard"
-"Today's discoveries"
-"April 2026 release browser"
-"Cursed of the Day"
-"Achievement: I Can't Believe Google Made This"
