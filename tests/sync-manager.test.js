@@ -23,7 +23,7 @@ function loadManager({storedQueue = [], addEventListener = () => {}} = {}) {
   };
   context.window.window = context.window;
   vm.createContext(context);
-  vm.runInContext(fs.readFileSync(path.join(root, 'billy-sync-manager.js'), 'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(root, 'engine/platform/sync/sync-manager.js'), 'utf8'), context);
   return {manager: context.window.BillySyncManager, store};
 }
 

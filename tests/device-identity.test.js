@@ -24,7 +24,7 @@ function loadIdentity({cloudApi, cryptoOverride} = {}) {
   };
   context.window.crypto = crypto;
   vm.createContext(context);
-  vm.runInContext(fs.readFileSync(path.join(root, 'billy-device-identity.js'), 'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(root, 'engine/platform/identity/device-identity.js'), 'utf8'), context);
   return {identity:context.window.BillyDeviceIdentity, data};
 }
 

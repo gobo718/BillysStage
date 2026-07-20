@@ -222,3 +222,8 @@ See `V2.6.0_CURATOR_EXPLORER_FOUNDATION_CHANGELOG.md`.
 ## v2.5.2 — Engineering Pass 2.2: Data Integrity
 
 Added a repeatable integrity gate for the 147,000-row mashup inventory and its 619 ingredient metadata records. The audit found no core inventory defects. Five unique unresolved profile/demo pair concepts remain unchanged and are reported as warnings rather than silently rewritten.
+
+## v3.0.0 Stage 3B — Engine Service Extraction
+- Established canonical Engine ownership for storage, identity, sync, repositories, cloud API, and Worker services.
+- Preserved historical browser and Worker entry paths with compatibility delegation.
+- Added compatibility tests while retaining current runtime behavior and visible v2.6.4 application label pending a user-verified v3 release.

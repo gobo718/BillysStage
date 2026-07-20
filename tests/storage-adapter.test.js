@@ -11,7 +11,7 @@ const localStorage = {
 const ctx = {window:{}, localStorage, console, JSON, Map, Set, Date};
 ctx.window.window=ctx.window;
 vm.createContext(ctx);
-for (const file of ['billy-storage.js','billy-storage-adapters.js','billy-repositories.js']) {
+for (const file of ['engine/platform/storage/storage.js','engine/platform/storage/adapters.js','engine/service/repositories/billy-repositories.js']) {
   vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ctx,{filename:file});
 }
 const {BillyStorage, BillyStorageAdapters, BillyRepositories} = ctx.window;

@@ -29,7 +29,7 @@ const root = __dirname + '/..';
 {
   const {ctx} = context({'ek-seen':['🐷|🥓'], 'ek-favorites':['🥓|🐷']});
   load(ctx, root + '/mashup-core.js');
-  load(ctx, root + '/billy-storage.js');
+  load(ctx, root + '/engine/platform/storage/storage.js');
   load(ctx, root + '/progress-engine.js');
   assert(ctx.BillyProgress.hasSeen('🐷','🥓'));
   assert(ctx.BillyProgress.isFavorite('🐷','🥓'));
@@ -42,7 +42,7 @@ const root = __dirname + '/..';
 {
   const {ctx} = context();
   load(ctx, root + '/mashup-core.js');
-  load(ctx, root + '/billy-storage.js');
+  load(ctx, root + '/engine/platform/storage/storage.js');
   load(ctx, root + '/curator-data.js');
   load(ctx, root + '/collections-data.js');
   const rows = ctx.BillyCollections.list();

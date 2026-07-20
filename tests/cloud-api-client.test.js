@@ -27,7 +27,7 @@ const loadClient = ({configuredBase = 'https://api.example.test/', storedBase = 
   ctx.window.window = ctx.window;
   ctx.window.localStorage = localStorage;
   vm.createContext(ctx);
-  vm.runInContext(fs.readFileSync(path.join(root, 'billy-cloud-api.js'), 'utf8'), ctx);
+  vm.runInContext(fs.readFileSync(path.join(root, 'engine/service/cloud/cloud-api.js'), 'utf8'), ctx);
   return {api: ctx.window.BillyCloudApi, calls, ctx};
 };
 

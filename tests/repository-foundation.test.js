@@ -7,7 +7,7 @@ const localStorage = {setItem:(k,v)=>store.set(k,String(v)),getItem:k=>store.has
 const ctx = {window:{}, localStorage, console, JSON, Map, Set, Date};
 ctx.window.window=ctx.window;
 vm.createContext(ctx);
-for (const file of ['billy-storage.js','billy-sync-manager.js','billy-repositories.js']) vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ctx,{filename:file});
+for (const file of ['engine/platform/storage/storage.js','engine/platform/sync/sync-manager.js','engine/service/repositories/billy-repositories.js']) vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ctx,{filename:file});
 const repos=ctx.window.BillyRepositories;
 if (!repos || repos.version !== 5) throw new Error('Repository layer failed to initialize');
 repos.settings.set('collection.hideEmptySlots',true);
