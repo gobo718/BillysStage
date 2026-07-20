@@ -1,0 +1,10 @@
+{
+  "project": "Billy Labs",
+  "version": "2.6.4",
+  "baseline": "2.6.2",
+  "build": "BL-263",
+  "channel": "development",
+  "verificationPhrase": "Purple Monkeys",
+  "release": "v2.6.4",
+  "name": "Curator Entrance Restoration"
+}

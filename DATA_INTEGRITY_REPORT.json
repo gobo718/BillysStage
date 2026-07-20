@@ -1,0 +1,135 @@
+{
+  "ok": true,
+  "summary": {
+    "rows": 147000,
+    "canonicalIds": 147000,
+    "uniqueIngredients": 619,
+    "metadataEntries": 619,
+    "duplicateIngredientRows": 413,
+    "releaseDates": 43,
+    "publishedCuratorEntries": 0,
+    "authoredPairReferences": 16,
+    "unresolvedAuthoredPairReferences": 8,
+    "unresolvedAuthoredPairIds": 5
+  },
+  "releaseCounts": {
+    "20201001": 10693,
+    "20210218": 571,
+    "20210521": 167,
+    "20210831": 829,
+    "20211115": 2471,
+    "20220110": 178,
+    "20220203": 1475,
+    "20220406": 885,
+    "20220506": 892,
+    "20220815": 1321,
+    "20220823": 2,
+    "20221101": 827,
+    "20221107": 176,
+    "20230126": 568,
+    "20230127": 1679,
+    "20230216": 338,
+    "20230221": 1,
+    "20230301": 2084,
+    "20230418": 4233,
+    "20230421": 2,
+    "20230426": 5,
+    "20230803": 2513,
+    "20230818": 142,
+    "20230821": 595,
+    "20231113": 8886,
+    "20231128": 83,
+    "20240206": 19504,
+    "20240214": 47,
+    "20240530": 33138,
+    "20240610": 1870,
+    "20240715": 415,
+    "20241021": 23326,
+    "20241023": 1321,
+    "20250130": 10015,
+    "20250204": 416,
+    "20250430": 3319,
+    "20250501": 353,
+    "20250519": 2,
+    "20250731": 75,
+    "20251029": 1121,
+    "20260128": 2699,
+    "20260202": 7720,
+    "20260429": 43
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "code": "UNRESOLVED_AUTHORED_PAIR",
+      "path": "fellow.birthForm",
+      "pair": [
+        "🦝",
+        "⚡"
+      ],
+      "id": "🦝|⚡"
+    },
+    {
+      "code": "UNRESOLVED_AUTHORED_PAIR",
+      "path": "fellow.avatarPair",
+      "pair": [
+        "🦝",
+        "⚡"
+      ],
+      "id": "🦝|⚡"
+    },
+    {
+      "code": "UNRESOLVED_AUTHORED_PAIR",
+      "path": "blurblets.community.2.pair",
+      "pair": [
+        "🐸",
+        "🔭"
+      ],
+      "id": "🐸|🔭"
+    },
+    {
+      "code": "UNRESOLVED_AUTHORED_PAIR",
+      "path": "top8Pairs.0",
+      "pair": [
+        "🦝",
+        "⚡"
+      ],
+      "id": "🦝|⚡"
+    },
+    {
+      "code": "UNRESOLVED_AUTHORED_PAIR",
+      "path": "top8Pairs.1",
+      "pair": [
+        "🌵",
+        "🦆"
+      ],
+      "id": "🌵|🦆"
+    },
+    {
+      "code": "UNRESOLVED_AUTHORED_PAIR",
+      "path": "top8Pairs.3",
+      "pair": [
+        "🐸",
+        "🔭"
+      ],
+      "id": "🐸|🔭"
+    },
+    {
+      "code": "UNRESOLVED_AUTHORED_PAIR",
+      "path": "top8Pairs.6",
+      "pair": [
+        "🦝",
+        "🎩"
+      ],
+      "id": "🎩|🦝"
+    },
+    {
+      "code": "UNRESOLVED_AUTHORED_PAIR",
+      "path": "top8Pairs.7",
+      "pair": [
+        "🌙",
+        "🧀"
+      ],
+      "id": "🌙|🧀"
+    }
+  ]
+}

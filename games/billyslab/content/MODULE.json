@@ -1,0 +1,49 @@
+{
+  "$schema": "../../../contracts/module-manifest.schema.json",
+  "id": "billyslab-content",
+  "name": "BillysLab Game Content",
+  "version": "0.1.0",
+  "status": "foundation",
+  "purpose": "Billy-specific data, rules, terminology, lore, presentation assets, and Engine configuration.",
+  "owns": [
+    "emoji-data",
+    "emoji-metadata",
+    "collection-definitions",
+    "rarity-definitions",
+    "published-blurblets",
+    "profile-content",
+    "game-rules",
+    "game-terminology",
+    "lore",
+    "art-assets",
+    "engine-configuration"
+  ],
+  "dependsOn": [
+    "engine-contracts"
+  ],
+  "mayImport": [
+    "engine.contracts"
+  ],
+  "mustNotImport": [
+    "museum.private",
+    "curator.private",
+    "engine.private"
+  ],
+  "exports": [
+    "public-game-data",
+    "curator-game-data",
+    "game-event-mappings",
+    "game-system-configuration"
+  ],
+  "currentEvidence": [
+    "emoji-data.js",
+    "emoji-metadata.js",
+    "collections-data.js",
+    "published-curator-data.js",
+    "profile-data.js"
+  ],
+  "migrationDebt": [
+    "collections-data.js mixes definitions with mechanics",
+    "published-curator-data.js requires versioned public schema"
+  ]
+}

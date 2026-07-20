@@ -1,0 +1,6 @@
+Billy Labs v2.6.4 — Curator Entrance Restoration
+
+Removes the floating Curator launcher from the public home page.
+Restores a prominent illustrated Curator Control Room entrance in Museum Archive.
+Keeps the entrance above the archive tools and safely clear of the bottom navigation on mobile.
+Preserves all v2.6.3 Curator Control Room departments and behavior.
