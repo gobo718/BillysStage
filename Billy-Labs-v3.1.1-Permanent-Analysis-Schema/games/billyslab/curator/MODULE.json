@@ -1,0 +1,44 @@
+{
+  "$schema": "../../../contracts/module-manifest.schema.json",
+  "id": "curator",
+  "name": "BillysLab Curator",
+  "version": "0.2.0",
+  "status": "foundation",
+  "purpose": "Administrative editing, review, diagnostics, metadata management, and controlled publication.",
+  "owns": [
+    "curator-ui",
+    "draft-records",
+    "metadata-editing",
+    "review-workflows",
+    "publication-controls",
+    "curator-diagnostics",
+    "history-and-revert-ui"
+  ],
+  "dependsOn": [
+    "engine",
+    "billyslab-content"
+  ],
+  "mayImport": [
+    "engine.public",
+    "engine.admin",
+    "billyslab-content.curator"
+  ],
+  "mustNotImport": [
+    "museum.private"
+  ],
+  "exports": [
+    "publication-commands",
+    "validated-draft-records",
+    "curator-audit-events"
+  ],
+  "currentEvidence": [
+    "curator/index.html",
+    "curator-data.js"
+  ],
+  "migrationDebt": [
+    "explorer.html archive responsibility must move here",
+    "mashup.html editing responsibility must move here",
+    "diagnostics.html ownership must be resolved",
+    "draft and published schemas need explicit separation"
+  ]
+}

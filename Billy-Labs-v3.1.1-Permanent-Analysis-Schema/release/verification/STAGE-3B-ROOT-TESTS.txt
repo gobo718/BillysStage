@@ -1,0 +1,163 @@
+TAP version 13
+# Canonical identity tests passed.
+# Subtest: tests/canonical-identity.test.js
+ok 1 - tests/canonical-identity.test.js
+  ---
+  duration_ms: 592.081273
+  type: 'test'
+  ...
+# cloud API client tests passed
+# Subtest: tests/cloud-api-client.test.js
+ok 2 - tests/cloud-api-client.test.js
+  ---
+  duration_ms: 581.002043
+  type: 'test'
+  ...
+# curator-explorer-foundation.test.js passed
+# Subtest: tests/curator-explorer-foundation.test.js
+ok 3 - tests/curator-explorer-foundation.test.js
+  ---
+  duration_ms: 572.450579
+  type: 'test'
+  ...
+# Data integrity tests passed.
+# Subtest: tests/data-integrity.test.js
+ok 4 - tests/data-integrity.test.js
+  ---
+  duration_ms: 2566.049823
+  type: 'test'
+  ...
+# Subtest: device identity is stable and anonymous
+ok 5 - device identity is stable and anonymous
+  ---
+  duration_ms: 3.978921
+  type: 'test'
+  ...
+# Subtest: invalid stored values are replaced with a valid identity
+ok 6 - invalid stored values are replaced with a valid identity
+  ---
+  duration_ms: 1.359688
+  type: 'test'
+  ...
+# Subtest: registration requires configured cloud API
+ok 7 - registration requires configured cloud API
+  ---
+  duration_ms: 2.856677
+  type: 'test'
+  ...
+# Subtest: registration persists timestamps and returns cloud result
+ok 8 - registration persists timestamps and returns cloud result
+  ---
+  duration_ms: 4.569077
+  type: 'test'
+  ...
+# discovery-engine.test.js passed
+# Subtest: tests/discovery-engine.test.js
+ok 6 - tests/discovery-engine.test.js
+  ---
+  duration_ms: 491.395771
+  type: 'test'
+  ...
+# engine service compatibility tests passed
+# Subtest: tests/engine-service-compatibility.test.js
+ok 7 - tests/engine-service-compatibility.test.js
+  ---
+  duration_ms: 481.220977
+  type: 'test'
+  ...
+# live blurblet activation tests passed
+# Subtest: tests/live-blurblet-activation.test.js
+ok 8 - tests/live-blurblet-activation.test.js
+  ---
+  duration_ms: 417.074789
+  type: 'test'
+  ...
+# Mashup resolution tests passed.
+# Full inventory resolution contract passed.
+# Subtest: tests/mashup-resolution.test.js
+ok 9 - tests/mashup-resolution.test.js
+  ---
+  duration_ms: 2325.547208
+  type: 'test'
+  ...
+# performance-scalability.test.js passed
+# Subtest: tests/performance-scalability.test.js
+ok 10 - tests/performance-scalability.test.js
+  ---
+  duration_ms: 321.829766
+  type: 'test'
+  ...
+# progress cloud sync tests passed
+# Subtest: tests/progress-cloud-sync.test.js
+ok 11 - tests/progress-cloud-sync.test.js
+  ---
+  duration_ms: 317.101701
+  type: 'test'
+  ...
+# repository foundation tests passed
+# Subtest: tests/repository-foundation.test.js
+ok 12 - tests/repository-foundation.test.js
+  ---
+  duration_ms: 388.31387
+  type: 'test'
+  ...
+# search architecture tests passed
+# Subtest: tests/search-architecture.test.js
+ok 13 - tests/search-architecture.test.js
+  ---
+  duration_ms: 323.014943
+  type: 'test'
+  ...
+# storage adapter tests passed
+# Subtest: tests/storage-adapter.test.js
+ok 14 - tests/storage-adapter.test.js
+  ---
+  duration_ms: 315.44941
+  type: 'test'
+  ...
+# Storage foundation tests passed.
+# Subtest: tests/storage-foundation.test.js
+ok 15 - tests/storage-foundation.test.js
+  ---
+  duration_ms: 310.491569
+  type: 'test'
+  ...
+# Subtest: registers repositories and tracks sync state
+ok 19 - registers repositories and tracks sync state
+  ---
+  duration_ms: 3.641835
+  type: 'test'
+  ...
+# Subtest: batches queue entries by repository and flushes latest payload
+ok 20 - batches queue entries by repository and flushes latest payload
+  ---
+  duration_ms: 1.937734
+  type: 'test'
+  ...
+# Subtest: disabled flush preserves the queue
+ok 21 - disabled flush preserves the queue
+  ---
+  duration_ms: 2.937969
+  type: 'test'
+  ...
+# Subtest: failed flush retains item and increments attempts
+ok 22 - failed flush retains item and increments attempts
+  ---
+  duration_ms: 1.299565
+  type: 'test'
+  ...
+# Subtest: rejects unknown repositories and incomplete adapters
+ok 23 - rejects unknown repositories and incomplete adapters
+  ---
+  duration_ms: 1.687423
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2665.629213
