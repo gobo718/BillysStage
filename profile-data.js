@@ -9,6 +9,29 @@ window.BILLY_PROFILE_DATA = {
     collectionPercent: 96.8,
     countriesVisited: 42
   },
+  profileProps: {
+    trickOrTreat: { item: "🪥" }
+  },
+  residence: {
+    name: "Billy's Place",
+    status: "Three visitors stopped by while you were away.",
+    weather: "☾  ✦  68°",
+    visitors: [
+      { name: "OctoKing", avatar: "🐙", time: "12m" },
+      { name: "PixelFellow", avatar: "🐸", time: "1h" },
+      { name: "MashupHunter", avatar: "🦈", time: "3h" },
+      { name: "EmojiAlchemy", avatar: "🧪", time: "Yesterday" }
+    ],
+    billygrams: [
+      { icon: "✉️", title: "A visitor left something", detail: "Check the Guestbook", unread: true },
+      { icon: "🏛️", title: "The Museum noticed you", detail: "Your collection grew", unread: true },
+      { icon: "🪥", title: "No explanation provided", detail: "Probably fine", unread: false }
+    ],
+    guestbook: [
+      { author: "@OctoKing", text: "Your place has excellent mysterious-box energy." },
+      { author: "@PixelFellow", text: "Stopped by. Tapped the puppy nose. Said nothing." }
+    ]
+  },
   microflexes: [
     "The 🐈 emoji appears in more Secret Awards than any other ingredient.",
     "These little facts are called Microflexes.",
