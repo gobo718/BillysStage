@@ -1,19 +1,3 @@
-# v3.1.2
-
-See `V3.1.2_FIRST_TRUE_VISION_ANALYSIS_CHANGELOG.md`.
-
-# Changelog
-
-## 3.1.1 — Permanent Analysis Schema
-- Added stable field, option, report, and suggestion IDs.
-- Added Dominant Color Brightness with Light, Medium, Dark, and Mixed options.
-- Rebuilt the review report around Detected Characteristics, Visual Analysis, Additional Observations, and Remaining Categories.
-- Preserved the rule that AI suggestions never overwrite curator data.
-
-# v3.1.1 — Run Analysis Foundation
-
-See `V3.1.1_RUN_ANALYSIS_FOUNDATION_CHANGELOG.md`.
-
 ## v2.6.3 — Curator Control Room Redesign
 - Added a dedicated Control Room landing view with a purple laboratory door and concise substitute-curator orientation.
 - Organized the Curator into Collections & Publishing, Discovery Engine, Diagnostics, and Settings departments.
@@ -238,16 +222,3 @@ See `V2.6.0_CURATOR_EXPLORER_FOUNDATION_CHANGELOG.md`.
 ## v2.5.2 — Engineering Pass 2.2: Data Integrity
 
 Added a repeatable integrity gate for the 147,000-row mashup inventory and its 619 ingredient metadata records. The audit found no core inventory defects. Five unique unresolved profile/demo pair concepts remain unchanged and are reported as warnings rather than silently rewritten.
-
-## v3.0.0 Stage 3B — Engine Service Extraction
-- Established canonical Engine ownership for storage, identity, sync, repositories, cloud API, and Worker services.
-- Preserved historical browser and Worker entry paths with compatibility delegation.
-- Added compatibility tests while retaining current runtime behavior and visible v2.6.4 application label pending a user-verified v3 release.
-
-## v3.0.0 Stage 3C — Data Contracts
-
-- Added canonical typed item identity contracts.
-- Split Engine collection mechanics from BillysLab collection definitions and storage adapters.
-- Split Curator draft records from public published projections.
-- Added versioned JSON schemas and compatibility tests.
-- Preserved existing browser paths, storage keys, and visible behavior.
